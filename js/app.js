@@ -68,8 +68,8 @@ async function displayHourlyForecast(hourlyData, latitude, longitude) {
 }
 
 async function getAirQualityData(latitude, longitude) {
-    const apiKey = '5aa00882c5b3ed64b1acdeda31782075'; // actual API key
-    const url = `http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    const apiKey = '.......'; // Paste your actual API key
+    const url = `........`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -105,8 +105,8 @@ async function getWeatherDataForCurrentLocation() {
 }
 
 async function getWeatherData(latitude, longitude) {
-    const apiKey = '5aa00882c5b3ed64b1acdeda31782075'; // Your actual API key
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    const apiKey = '.......'; // Paste your actual API key
+    const url = `........`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -135,8 +135,8 @@ async function getWeatherData(latitude, longitude) {
 }
 
 async function getHourlyForecastData(latitude, longitude) {
-    const apiKey = '5aa00882c5b3ed64b1acdeda31782075'; // Your actual API key
-    const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    const apiKey = '.......'; // Paste your actual API key
+    const url = `........`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -160,8 +160,8 @@ getWeatherDataForCurrentLocation();
 
 // Function to get weather data by city name
 async function getWeatherDataByCity(city) {
-    const apiKey = '5aa00882c5b3ed64b1acdeda31782075'; // Your actual API key
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = '.......'; // Paste your actual API key
+    const url = `........`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
