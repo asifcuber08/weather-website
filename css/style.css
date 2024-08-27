@@ -1,0 +1,226 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url('https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Header styling */
+.header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px; /* Modern rounded corners */
+    margin: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 20px; /* Modern rounded corners */
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px; /* Modern rounded corners */
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out; /* Add transform to the transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px; /* Modern rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.weather-card {
+    margin-bottom: 20px;
+}
+
+.city-name {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.recommendation {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.hourly-forecast-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px; /* Modern rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+    padding: 20px;
+    margin-top: 20px;
+    overflow-x: auto; /* Add horizontal scroll for smaller screens */
+}
+
+.hourly-forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hourly-forecast-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hourly-forecast-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the weather icons size and alignment */
+.hourly-forecast-table img {
+    width: 50px; /* Increase the size of the icons */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align icons vertically */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Add a drop shadow effect */
+    animation: weatherIconAnimation 1s ease-in-out infinite alternate; /* Retain the animation */
+}
+
+@keyframes weatherIconAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Activity Suggestions Styling */
+.activity-suggestions-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px; /* Modern rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden; /* Ensure contents don't overflow */
+}
+
+.activity-suggestions-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    margin-top: 10px; /* Increase margin for better spacing */
+}
+
+.activity-suggestions-table th, .activity-suggestions-table td {
+    padding: 15px; /* Increase padding for better visual separation */
+    border-bottom: 1px solid #ccc;
+    text-align: center; /* Center-align text */
+}
+
+.activity-suggestions-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px; /* Increase font size */
+}
+
+.activity-suggestions-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.activity-suggestions-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02); /* Slightly scale up on hover for emphasis */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0; /* Modern rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-hidden {
+    transform: translateY(100%);
+}
+
+/* Accessibility Improvements */
+button:focus,
+input[type="text"]:focus {
+    outline: 2px solid #ff0000;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .container,
+    .hourly-forecast-container,
+    .activity-suggestions-container {
+        padding: 10px;
+    }
+    
+    .city-name {
+        font-size: 20px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Weather Forecast</h1>
+        <div class="search-container">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="weatherResult" class="weather-card">
+            <h2 class="city-name">City Name</h2>
+            <div class="weather-info">
+                <p>Temperature: <span id="temperature">--</span> °C</p>
+                <p>Weather: <span id="weatherDescription">--</span></p>
+                <p>Humidity: <span id="humidity">--</span>%</p>
+                <p>Wind Speed: <span id="windSpeed">--</span> m/s</p>
+            </div>
+        </div>
+        <div id="recommendation" class="recommendation"></div>
+    </div>
+
+    <div class="hourly-forecast-container">
+        <table class="hourly-forecast-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Weather</th>
+                    <th>Temperature (°C)</th>
+                    <th>Wind Speed (m/s)</th> <!-- New column for wind speed -->
+                    <th>Air Quality (AQI)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate forecast data dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="activity-suggestions-container">
+        <table class="activity-suggestions-table">
+            <thead>
+                <tr>
+                    <th>Suggested Activities</th>
+                </tr>
+            </thead>
+            <tbody id="activitySuggestions">
+                <!-- Populate activity suggestions dynamically using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Weather Forecast by OpenWeather &copy; 2024</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
