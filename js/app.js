@@ -68,8 +68,8 @@ async function displayHourlyForecast(hourlyData, latitude, longitude) {
 }
 
 async function getAirQualityData(latitude, longitude) {
-    const apiKey = '.......'; // Paste your actual API key
-    const url = `........`;  // Paste your actual API url
+    const apiKey = 'a573e13a3c228c41bb78ace208e3bd87'; // Paste your actual API key
+    const url = `https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -105,8 +105,8 @@ async function getWeatherDataForCurrentLocation() {
 }
 
 async function getWeatherData(latitude, longitude) {
-    const apiKey = '.......'; // Paste your actual API key
-    const url = `........`;  // Paste your actual API url
+    const apiKey = 'a573e13a3c228c41bb78ace208e3bd87'; // Paste your actual API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -135,8 +135,8 @@ async function getWeatherData(latitude, longitude) {
 }
 
 async function getHourlyForecastData(latitude, longitude) {
-    const apiKey = '.......'; // Paste your actual API key
-    const url = `........`;  // Paste your actual API url
+    const apiKey = 'a573e13a3c228c41bb78ace208e3bd87'; // Paste your actual API key
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -160,8 +160,8 @@ getWeatherDataForCurrentLocation();
 
 // Function to get weather data by city name
 async function getWeatherDataByCity(city) {
-    const apiKey = '.......'; // Paste your actual API key
-    const url = `........`;  // Paste your actual API url
+    const apiKey = 'a573e13a3c228c41bb78ace208e3bd87'; // Paste your actual API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;  // Paste your actual API url
 
     try {
         const response = await fetch(url);
@@ -242,4 +242,3 @@ searchButton.addEventListener('mouseenter', () => {
 searchButton.addEventListener('mouseleave', () => {
     searchButton.classList.remove('hover-effect');
 });
-
